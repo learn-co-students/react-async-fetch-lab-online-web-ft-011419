@@ -1,14 +1,19 @@
 // create your App component here
-import React, { Component } from 'react';
 
-class App extends Component {
-constructor(){
-super();
+import React from 'react';
 
-this.state = {
- astros:[]
+export default class App extends React.Component {
+
+state = {
+ astros: []
   }
-}
+  render() {
+    return (
+      <div>
+        {this.state.astros.map(person => person.name)}
+      </div>
+    )
+  }
   //fetch = () =>{
 
   //}
@@ -23,14 +28,7 @@ this.state = {
   }
    //{this.state.astros.map(person => person.name)}<br></br>
 
-      render() {
-        return (
-          <div>
-            {this.state.astros.map(person => person.name)}
-          </div>
-        )
-       }
+     
        
 
 }
-export default App;
